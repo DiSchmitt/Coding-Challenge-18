@@ -1,21 +1,61 @@
 .App {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #865c00;
-  color: white;
-  width: 100%;
+  background-color: #cd04f5;
+  padding: 20px;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-main {
-  flex-grow: 1;
-  padding: 20px;
+.app-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-movie {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.selected-movie-picture {
+  width: 200px;
+  height: auto; 
+  margin-bottom: 10px;
+}
+
+.selected-movie-title {
+  font-size: 2rem; 
+  margin-top: 10px; 
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.movie-picture-small {
+  width: 100px; 
+  height: auto; 
+  margin-bottom: 5px;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 .rate-movie {
   text-align: center;
@@ -44,5 +84,46 @@
 
 .confirmation-message {
   margin-top: 10px;
-  color: green;
+  color: rgb(255, 255, 255);
+}
+
+
+.movies-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.movie-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.movie-picture {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.movie-name {
+  font-size: 16px;
 }

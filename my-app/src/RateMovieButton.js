@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const RateMovieButton = () => {
-  const [rating, setRating] = useState(0);
-  const [showConfirmation, setShowConfirmation] = useState(false);
+const RateMovieButton = ({ initialRating, onRate }) => {
+  const [rating, setRating] = useState(initialRating);
+
+  useEffect(() => {
+    setRating(initialRating);
+  }, [initialRating]);
 
   const handleRatingClick = (value) => {
     setRating(value);
@@ -12,7 +15,7 @@ const RateMovieButton = () => {
     if (rating === 0) {
       alert('Please select a rating before submitting.');
     } else {
-      setShowConfirmation(true);
+      onRate(rating); 
     }
   };
 
@@ -33,14 +36,8 @@ const RateMovieButton = () => {
       <button className="submit-btn" onClick={handleSubmitRating}>
         Submit Rating
       </button>
-      {showConfirmation && (
-        <p className="confirmation-message">
-          Thank you for rating {rating}/5 tomatoes!
-        </p>
-      )}
     </div>
   );
 };
 
 export default RateMovieButton;
-
