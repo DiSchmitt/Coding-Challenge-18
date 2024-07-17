@@ -12,6 +12,13 @@
   justify-content: center;
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+}
+
 .app-content {
   display: flex;
   flex-direction: column;
@@ -57,6 +64,7 @@
   cursor: pointer;
   margin-bottom: 10px;
 }
+
 .rate-movie {
   text-align: center;
   margin: 20px;
@@ -84,9 +92,8 @@
 
 .confirmation-message {
   margin-top: 10px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
-
 
 .movies-dropdown {
   position: relative;
@@ -126,4 +133,16 @@
 
 .movie-name {
   font-size: 16px;
+}
+
+.upload-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
 }
