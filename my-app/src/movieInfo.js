@@ -1,5 +1,7 @@
+//area to add and remove movies.
 import SevenAngryMen from "./SAMPoster.jpg";
-import ANewHope from "./SWANH.jpg";
+import ANewHope from "./SWANHPoster.jpg";
+import MinusOne from "./GMOPoster.jpg";
 
 const movieInfo = [
   {
@@ -9,6 +11,10 @@ const movieInfo = [
   {
     name: "Twelve Angry Men",
     picture: SevenAngryMen,
+  },
+  {
+    name: "Godzilla Minus One",
+    picture: MinusOne,
   },
 ];
 
